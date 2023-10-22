@@ -1,0 +1,70 @@
+#home {
+  scroll-snap-type: x mandatory;
+}
+
+#home-row1 {
+  scroll-snap-align: center;
+}
+
+#home-box1 {
+  display: flex;
+  padding-top: 15%;
+  padding-bottom: 12%;
+}
+
+#home-slogan {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#home-slogan h1 {
+  font-weight: normal;
+  font-family: kei-font;
+}
+
+#home-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#home-logo img {
+  width: 60%;
+  height: auto;
+}
+
+#home-row2 {
+  scroll-snap-align: center;
+}
+
+#home-box2 {
+  display: flex;
+  padding-top: 20%;
+  padding-bottom: 20%;
+}
+
+#home-box-wrap {
+  display: flex;
+  border: 2px solid rgb(209, 208, 208);
+  height: auto;
+  width: auto;
+}
+
+#home-box-about-me1 {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+#home-box-about-me2 {
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-right: 9%;
+}

@@ -1,0 +1,18 @@
+#hiragana {
+  padding-top: 20%;
+  padding-bottom: 20%;
+}
+
+#hiragana-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#hiragana-button {
+  width: calc(20% - 10px);
+  border: 1px solid #ccc;
+  padding: 5px;
+  text-align: center;
+}

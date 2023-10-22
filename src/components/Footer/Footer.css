@@ -1,0 +1,8 @@
+#footer-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 45px;
+  background-color: grey;
+  color: white;
+}
