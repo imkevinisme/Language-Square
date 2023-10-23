@@ -1,161 +1,74 @@
 import { Button, Container } from "react-bootstrap";
+import useSound from "use-sound";
 import "./katakana.css";
 
 export function Katakana() {
+  const hiraganas = [
+    ["あ", "あ.mp3"],
+    ["い", "い.mp3"],
+    ["う", "う.mp3"],
+    ["え", "え.mp3"],
+    ["お", "お.mp3"],
+    ["か", "か.mp3"],
+    ["き", "き.mp3"],
+    ["く", "く.mp3"],
+    ["け", "け.mp3"],
+    ["こ", "こ.mp3"],
+    ["さ", "さ.mp3"],
+    ["し", "し.mp3"],
+    ["す", "す.mp3"],
+    ["せ", "せ.mp3"],
+    ["そ", "そ.mp3"],
+    ["た", "た.mp3"],
+    ["ち", "ち.mp3"],
+    ["つ", "つ.mp3"],
+    ["て", "て.mp3"],
+    ["と", "と.mp3"],
+    ["な", "な.mp3"],
+    ["に", "に.mp3"],
+    ["ぬ", "ぬ.mp3"],
+    ["ね", "ね.mp3"],
+    ["の", "の.mp3"],
+    ["は", "は.mp3"],
+    ["ひ", "ひ.mp3"],
+    ["ふ", "ふ.mp3"],
+    ["へ", "へ.mp3"],
+    ["ほ", "ほ.mp3"],
+    ["ま", "ま.mp3"],
+    ["み", "み.mp3"],
+    ["む", "む.mp3"],
+    ["め", "め.mp3"],
+    ["も", "も.mp3"],
+    ["や", "や.mp3"],
+    ["", ""],
+    ["ゆ", "ゆ.mp3"],
+    ["", ""],
+    ["よ", "よ.mp3"],
+    ["ら", "ら.mp3"],
+    ["り", "り.mp3"],
+    ["る", "る.mp3"],
+    ["れ", "れ.mp3"],
+    ["ろ", "ろ.mp3"],
+    ["わ", "わ.mp3"],
+    ["", ""],
+    ["", ""],
+    ["", ""],
+    ["を", "を.mp3"],
+  ];
+
+  var [play] = useSound();
+
   return (
     <>
-      <Container id="katakana">
-        <div id="katakana-row">
-          <Button id="katakana-button" variant="light">
-            あ<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            い<br />i
-          </Button>
-          <Button id="katakana-button" variant="light">
-            う<br />u
-          </Button>
-          <Button id="katakana-button" variant="light">
-            え<br />e
-          </Button>
-          <Button id="katakana-button" variant="light">
-            お<br />o
-          </Button>
-          <Button id="katakana-button" variant="light">
-            か<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            き<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            く<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            け<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            こ<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            さ<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            し<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            す<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            せ<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            そ<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            た<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            ち<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            つ<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            て<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            と<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            な<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            に<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            ぬ<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            ね<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            の<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            は<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            ひ<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            ふ<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            へ<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            ほ<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            ま<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            み<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            む<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            め<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            も<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            や<br />a
-          </Button>
-          <Button id="katakana-button" variant="light" disabled>
-            <br />
-          </Button>
-          <Button id="katakana-button" variant="light">
-            ゆ<br />a
-          </Button>
-          <Button id="katakana-button" variant="light" disabled>
-            <br />
-          </Button>
-          <Button id="katakana-button" variant="light">
-            よ<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            ら<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            り<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            る<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            れ<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            ろ<br />a
-          </Button>
-          <Button id="katakana-button" variant="light">
-            わ<br />a
-          </Button>
-          <Button id="katakana-button" variant="light" disabled>
-            <br />
-          </Button>
-          <Button id="katakana-button" variant="light" disabled>
-            <br />
-          </Button>
-          <Button id="katakana-button" variant="light" disabled>
-            <br />
-          </Button>
-          <Button id="katakana-button" variant="light">
-            を<br />a
-          </Button>
+      <Container id="hiragana">
+        <div id="hiragana-row">
+          {hiraganas.map((hiragana) => {
+            return (
+              <Button variant="light" onClick={play}>
+                {hiragana[[0]]}
+              </Button>
+            );
+          })}
         </div>
       </Container>
     </>
