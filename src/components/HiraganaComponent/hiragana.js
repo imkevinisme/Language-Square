@@ -1,7 +1,6 @@
 import { Button, Container } from "react-bootstrap";
 import useSound from "use-sound";
 import "./hiragana.css";
-import a from "../../assets/audio/あ.mp3";
 
 export function Hiragana() {
   const hiraganas = [
@@ -57,7 +56,9 @@ export function Hiragana() {
     ["を", "を.mp3"],
   ];
 
-  var [play] = useSound();
+  const ClickSound = (soundUrl) => {
+    const [play] = useSound({ soundUrl });
+  };
 
   return (
     <>
@@ -65,7 +66,7 @@ export function Hiragana() {
         <div id="hiragana-row">
           {hiraganas.map((hiragana) => {
             return (
-              <Button variant="light" onClick={play}>
+              <Button variant="light" onClick={ClickSound("audio/を.mp3")}>
                 {hiragana[[0]]}
               </Button>
             );
@@ -75,16 +76,4 @@ export function Hiragana() {
     </>
   );
 }
-
-// function importAll(audio) {
-//   let audios = {};
-//   audio.keys().map((item) => {
-//     audios[item.replace("./", "")] = audios(item);
-//   });
-//   return audios;
-// }
-
-// const audios = importAll(
-//   require.context("../../assets/audio/", false, /\.mp3/)
-// );
-// "../../assets/audio/" + hiragana[[1]];
+//${hiragana[[1]]}
