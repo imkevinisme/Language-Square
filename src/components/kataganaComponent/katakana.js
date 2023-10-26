@@ -1,5 +1,4 @@
 import { Button, Container } from "react-bootstrap";
-import useSound from "use-sound";
 import "./katakana.css";
 
 export function Katakana() {
@@ -23,10 +22,10 @@ export function Katakana() {
     ["チ", "ち.mp3"],
     ["ツ", "つ.mp3"],
     ["テ", "て.mp3"],
-    ["テ", "と.mp3"],
+    ["ト", "と.mp3"],
     ["ナ", "な.mp3"],
     ["ニ", "に.mp3"],
-    ["ヌ", "ぬ.mp3"],
+    ["ヌ", "の.mp3"],
     ["ネ", "ね.mp3"],
     ["ノ", "の.mp3"],
     ["ハ", "は.mp3"],
@@ -41,9 +40,9 @@ export function Katakana() {
     ["モ", "も.mp3"],
     ["ヤ", "や.mp3"],
     ["", ""],
-    ["ユ", "ゆ.mp3"],
+    ["ユ", "よ.mp3"],
     ["", ""],
-    ["ヨ", "よ.mp3"],
+    ["ヨ", "ゆ.mp3"],
     ["ラ", "ら.mp3"],
     ["リ", "り.mp3"],
     ["ル", "る.mp3"],
@@ -56,15 +55,22 @@ export function Katakana() {
     ["ヲ", "を.mp3"],
   ];
 
-  var [play] = useSound();
+  const playSound = (soundURL) => {
+    let sound = new Audio(`/audio/${soundURL}`);
+    sound.play();
+  };
 
   return (
     <>
-      <Container id="hiragana">
-        <div id="hiragana-row">
-          {hiraganas.map((hiragana) => {
+      <Container id="katakana">
+        <div id="katakana-row">
+          {hiraganas.map((hiragana, idx) => {
             return (
-              <Button variant="light" onClick={play}>
+              <Button
+                id="katakana-button"
+                variant="light"
+                onClick={() => playSound(hiragana[[1]])}
+              >
                 {hiragana[[0]]}
               </Button>
             );

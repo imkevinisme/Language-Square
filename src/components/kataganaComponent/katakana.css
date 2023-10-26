@@ -1,18 +1,16 @@
 #katakana {
-  padding-top: 20%;
-  padding-bottom: 20%;
+  padding: 20px;
 }
 
-#katakana-box {
+#katakana-row {
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 10px;
 }
 
 #katakana-button {
-  width: calc(20% - 10px);
-  border: 1px solid #ccc;
-  padding: 5px;
-  text-align: center;
+  margin-right: calc((80% - (5 * 80px)) / 4);
+  margin-bottom: 20px;
+  width: 80px;
+  height: 80px;
 }
