@@ -70,6 +70,7 @@ export function Katakana() {
                 id="katakana-button"
                 variant="light"
                 onClick={() => playSound(hiragana[[1]])}
+                disabled={hiragana[[0]] === ""}
               >
                 {hiragana[[0]]}
               </Button>
