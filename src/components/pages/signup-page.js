@@ -1,9 +1,10 @@
 import "bootstrap/dist/css/bootstrap.css";
+import { SignUp } from "../SignUpComponent/SignUp";
 
 let signUpPage = () => {
   return (
     <>
-      <h1>this is Sign up page</h1>
+      <SignUp />
     </>
   );
 };

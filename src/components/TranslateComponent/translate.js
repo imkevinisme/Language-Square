@@ -12,27 +12,24 @@ export function Translate() {
   const [language_to, setLanguage_to] = useState("");
   const [language_from, setLanguage_from] = useState("");
 
-  const handleSetLanguage_to = (selectedLanguage_to) => {
+  const handleSetLanguage_from_to = (
+    selectedLanguage_from,
+    selectedLanguage_to
+  ) => {
+    setLanguage_from(selectedLanguage_from);
+    console.log(selectedLanguage_from);
     setLanguage_to(selectedLanguage_to);
     console.log(selectedLanguage_to);
   };
 
-  const handleSetLanguage_from = (selectedLanguage_from) => {
-    setLanguage_from(selectedLanguage_from);
-    console.log(selectedLanguage_from);
-  };
-
-  async function handleTranslate() {
+  async function handleTranslate(e) {
+    e.preventDefault();
     try {
       console.log(value);
-      console.log(language_from);
-      console.log(language_to);
       const translatedText = await translate(value, {
         from: language_from,
         to: language_to,
       });
-      console.log(language_from);
-      console.log(language_to);
       console.log(translatedText);
     } catch (error) {
       console.error(error);
@@ -58,11 +55,10 @@ export function Translate() {
             id="translate-button-english"
             variant="light"
             onClick={() => {
-              handleSetLanguage_to("en");
-              handleSetLanguage_from("jpn");
+              handleSetLanguage_from_to("en", "jpn");
             }}
           >
-            English
+            English {">"} Japanese
           </Button>
           <Button id="translate-button" variant="light" type="submit">
             Translate
@@ -71,26 +67,13 @@ export function Translate() {
             id="translate-button-japanese"
             variant="light"
             onClick={() => {
-              handleSetLanguage_to("jpn");
-              handleSetLanguage_from("en");
+              handleSetLanguage_from_to("jpn", "en");
             }}
           >
-            Japanese
+            Japanese {">"} English
           </Button>
         </Container>
       </Container>
     </Form>
   );
 }
-
-// console.log(value);
-// console.log(language_from);
-// console.log(language_to);
-// const translatedText = await translate(value, {
-//   from: language_from,
-//   to: language_to,
-// });
-// console.log(language_from);
-// console.log(language_to);
-// console.log(translatedText);
-//const handleTranslate = async () => {};
