@@ -1,7 +1,7 @@
 import "./translate.css";
 
 import { useState } from "react";
-import { Container, Form, Button, InputGroup } from "react-bootstrap";
+import { Container, Form, Button } from "react-bootstrap";
 
 import translate from "translate";
 translate.engine = "google";
@@ -18,15 +18,12 @@ export function Translate() {
     selectedLanguage_to
   ) => {
     setLanguage_from(selectedLanguage_from);
-    console.log(selectedLanguage_from);
     setLanguage_to(selectedLanguage_to);
-    console.log(selectedLanguage_to);
   };
 
   async function handleTranslate(e) {
     e.preventDefault();
     try {
-      console.log(value);
       const translatedText = await translate(value, {
         from: language_from,
         to: language_to,

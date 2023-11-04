@@ -11,7 +11,7 @@ import learnN5 from "../../assets/learn/n5.pdf";
 
 export function Learn() {
   return (
-    <div className="d-flex justify-content-around container py-lg-5">
+    <div id="learn" className="d-flex justify-content-around container py-lg-5">
       <div className="row">
         <div className="col-lg ">
           <Card>

@@ -1,4 +1,9 @@
-/* .row {
-  padding-top: 39%;
-  padding-bottom: 39%;
-} */
+#learn {
+  position: relative;
+  min-height: 90vh;
+}
+
+.row {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}

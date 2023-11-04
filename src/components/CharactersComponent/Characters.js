@@ -1,10 +1,11 @@
 import { Container, Tab, Tabs } from "react-bootstrap";
 import { Hiragana } from "../HiraganaComponent/hiragana";
 import { Katakana } from "../kataganaComponent/katakana";
+import "./Characters.css";
 
 export function Characters() {
   return (
-    <Container>
+    <Container id="characters">
       <Tabs
         defaultActiveKey="hiragana"
         id="uncontrolled-tab-example"
