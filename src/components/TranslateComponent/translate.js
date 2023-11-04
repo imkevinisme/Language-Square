@@ -11,6 +11,7 @@ export function Translate() {
   const [value, setValue] = useState("");
   const [language_to, setLanguage_to] = useState("");
   const [language_from, setLanguage_from] = useState("");
+  const [translated_text, setTranslated_text] = useState("");
 
   const handleSetLanguage_from_to = (
     selectedLanguage_from,
@@ -30,7 +31,7 @@ export function Translate() {
         from: language_from,
         to: language_to,
       });
-      console.log(translatedText);
+      setTranslated_text(translatedText);
     } catch (error) {
       console.error(error);
     }
@@ -39,9 +40,9 @@ export function Translate() {
   return (
     <Form onSubmit={handleTranslate}>
       <Container id="translate">
-        <InputGroup size="lg">
+        <div id="translate-input" size="lg">
           <Form.Control
-            id="english-text"
+            id="text-before-translate"
             aria-label="Large"
             aria-describedby="inputGroup-sizing-sm"
             placeholder="Type Something ..."
@@ -49,7 +50,15 @@ export function Translate() {
             onChange={(event) => setValue(event.target.value)}
             value={value}
           />
-        </InputGroup>
+          <Form.Control
+            id="text-after-translate"
+            aria-label="Large"
+            aria-describedby="inputGroup-sizing-sm"
+            placeholder={translated_text}
+            as="textarea"
+            disabled
+          />
+        </div>
         <Container id="translate-button-container">
           <Button
             id="translate-button-english"
