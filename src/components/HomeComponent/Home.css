@@ -1,5 +1,7 @@
 #home {
   scroll-snap-type: x mandatory;
+  position: relative;
+  min-height: 90vh;
 }
 
 #home-row1 {
@@ -41,8 +43,6 @@
 
 #home-box2 {
   display: flex;
-  padding-top: 20%;
-  padding-bottom: 20%;
 }
 
 #home-box-wrap {

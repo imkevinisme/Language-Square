@@ -14,8 +14,7 @@ export function NavBar() {
             <Nav.Link href="/test">Test</Nav.Link>
             <Nav.Link href="/translate">Translate</Nav.Link>
             <NavDropdown title="User" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/login">Log In</NavDropdown.Item>
-              <NavDropdown.Item href="/signup">Sign Up</NavDropdown.Item>
+              <NavDropdown.Item href="/auth">Log In / Sign Up</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
