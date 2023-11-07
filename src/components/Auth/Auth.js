@@ -4,11 +4,7 @@ import { useState } from "react";
 import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
-export async function LogSignIn() {
-  const post = await prisma.post.create({
-    data: {},
-  });
-
+export function Auth() {
   let [authMode, setAuthMode] = useState("signin");
 
   const changeAuthMode = () => {

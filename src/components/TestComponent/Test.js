@@ -1,5 +1,4 @@
 import "./Test.css";
-import { Mcq } from "./Mcq/Mcq";
 
 import Button from "react-bootstrap/Button";
 import { Container } from "react-bootstrap";
