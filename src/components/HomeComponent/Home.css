@@ -47,7 +47,7 @@
 
 #home-box-wrap {
   display: flex;
-  background-color: rgb(240, 240, 240);
+  background-color: rgba(245, 245, 245, 0.5);
   height: auto;
   width: auto;
 }

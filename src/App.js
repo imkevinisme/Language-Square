@@ -7,7 +7,7 @@ import Auth from "./components/pages/auth-page";
 import Test from "./components/pages/test-page";
 import Translate from "./components/pages/translate-page";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Mcq } from "./components/TestComponent/Mcq/Mcq";
+import Mcq from "./components/TestComponent/Mcq/Mcq";
 
 let App = () => {
   return (
@@ -20,7 +20,7 @@ let App = () => {
           <Route path="/auth" element={<Auth />} />
           <Route path="/test" element={<Test />} />
           <Route path="/translate" element={<Translate />} />
-          <Route path="/mcq/mcq" element={<Mcq />} />
+          <Route path="/test/mcq" element={<Mcq />} />
         </Routes>
       </BrowserRouter>
     </>

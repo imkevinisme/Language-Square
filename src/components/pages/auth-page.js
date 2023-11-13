@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.css";
-import { Auth } from "../Auth/Auth";
+import { Auth } from "../AuthComponent/Auth";
 
 let AuthPage = () => {
   return (

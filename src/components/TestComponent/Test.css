@@ -1,13 +1,13 @@
 #test {
   position: relative;
   min-height: 90vh;
+  display: flex;
+  justify-content: center;
 }
 
 #test-button-row {
-  padding-top: 30%;
+  padding-top: 90px;
+  padding-bottom: 90px;
   display: flex;
-}
-
-#test-button-group {
-  padding: 20px;
+  justify-content: center;
 }

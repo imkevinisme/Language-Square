@@ -22,11 +22,10 @@ export function Learn() {
                 - N5 is the most basic level.
                 <br />
                 <br />- At this level, you should be able to understand and use
-                very basic Japanese in everyday situations.
+                very basic Japanese.
                 <br />
-                <br /> - You'll learn simple vocabulary, basic grammar
-                structures, and be able to read and write basic Hiragana and
-                Katakana.
+                <br /> - You'll learn simple vocabulary, grammar structures, and
+                be able to read and write Hiragana and Katakana.
               </Card.Text>
               <Button variant="primary" href={learnN5} download>
                 Download PDF - N5
@@ -98,15 +97,14 @@ export function Learn() {
             <Card.Body>
               <Card.Title>N1</Card.Title>
               <Card.Text>
-                - N1 is the most advanced level and represents a high level of
-                fluency.
+                - N1 is the most advanced level.
                 <br />
-                <br />- At this level, you can comprehend and use Japanese at a
-                near-native level.
+                <br />- You can comprehend and use Japanese at a near-native
+                level.
                 <br />
-                <br /> - You'll have a deep understanding of Japanese culture,
-                advanced reading and writing skills, and the ability to work in
-                professional or academic settings in Japanese.
+                <br /> - You'll have a deep understanding reading and writing
+                skills, and the ability to work in professional or academic in
+                Japanese.
               </Card.Text>
               <Button variant="primary">Download PDF - N1</Button>
             </Card.Body>

@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.css";
 
-import { NavBar } from "../NavBar/NavBar";
-import { Footer } from "../Footer/Footer";
+import { NavBar } from "../NavBarComponent/NavBar";
+import { Footer } from "../FooterComponent/Footer";
 import { Characters } from "../CharactersComponent/Characters";
 
 let CharactersPage = () => {

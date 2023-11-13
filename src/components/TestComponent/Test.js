@@ -1,12 +1,11 @@
 import "./Test.css";
-
-import Button from "react-bootstrap/Button";
-import { Container } from "react-bootstrap";
-import { Nav } from "react-bootstrap";
+import { Nav, Container, Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 export function Test() {
+  const navigate = new useNavigate();
   function navigateToMcq() {
-    <Nav.Link href="/mcq/mcq" />;
+    navigate("/test/mcq");
   }
 
   return (
@@ -15,19 +14,19 @@ export function Test() {
         <Container id="test-button-group" className="d-grid gap-2">
           <Button variant="light" size="lg" onClick={navigateToMcq}>
             {" "}
-            N5
+            N5 - (Easiest)
           </Button>
           <Button variant="light" size="lg">
-            N4
+            N4 - (Easy)
           </Button>
           <Button variant="light" size="lg">
-            N3
+            N3 - (Medium)
           </Button>
           <Button variant="light" size="lg">
-            N2
+            N2 - (Difficult)
           </Button>
           <Button variant="light" size="lg">
-            N1
+            N1 - (Most Difficult)
           </Button>
         </Container>
       </Container>

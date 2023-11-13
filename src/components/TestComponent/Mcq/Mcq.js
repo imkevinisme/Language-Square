@@ -2,7 +2,7 @@ import "./Mcq.css";
 
 import { Container } from "react-bootstrap";
 
-export function Mcq() {
+export default function Mcq() {
   return (
     <div id="mcq">
       <Container id="mcq-row"></Container>
