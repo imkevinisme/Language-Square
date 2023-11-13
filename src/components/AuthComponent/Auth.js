@@ -5,10 +5,12 @@ import axios from "axios";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+// import { AuthContext } from "../../helpers/AuthContext";
 
 export function Auth() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  // const { setAuthState } = useContext(AuthContext);
 
   const navigate = useNavigate();
 
@@ -19,7 +21,8 @@ export function Auth() {
       if (response.data.error) {
         alert(response.data.error);
       } else {
-        sessionStorage.setItem("accessToken", response.data);
+        localStorage.setItem("accessToken", response.data);
+        // setAuthState(true);
         navigate("/");
       }
     });
