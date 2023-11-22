@@ -2,6 +2,7 @@ import "./translate.css";
 
 import { useState } from "react";
 import { Container, Form, Button } from "react-bootstrap";
+import OpenAI from "openai";
 
 import translate from "translate";
 translate.engine = "google";

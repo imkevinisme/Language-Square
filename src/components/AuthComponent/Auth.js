@@ -21,7 +21,8 @@ export function Auth() {
       if (response.data.error) {
         alert(response.data.error);
       } else {
-        localStorage.setItem("accessToken", response.data);
+        localStorage.setItem("accessToken", response.data, email);
+        localStorage.setItem("emailToken", email);
         // setAuthState(true);
         navigate("/");
       }
@@ -114,11 +115,11 @@ export function Auth() {
       >
         <Form className="Auth-form">
           <div className="Auth-form-content">
-            <h3 className="Auth-form-title">Sign In</h3>
+            <h3 className="Auth-form-title">Sign Up</h3>
             <div className="text-center">
               Already registered?{" "}
               <span className="link-primary" onClick={changeAuthMode}>
-                Sign In
+                Sign Up
               </span>
             </div>
             <div className="form-group mt-3">
